@@ -45,6 +45,38 @@
                 social media: https://www.facebook.com/almira.koshkina/ , https://www.instagram.com/almira_koshkina_photo/
             </p>
         </section>
+       
+        <section> 
+            <h2>Leave a Message</h2>
+            <form id = "leave_message" action = "index.html" method = "post" name = "leave_message">
+                <label for = "text"> Text </label>
+                <br>
+                <input type = "text" id = "text" name = "name" required ="true">
+                <br>
+
+                <label for = "email"> Email </label>
+                <br>
+                <input type = "email" id = "email" name = "email" required ="true">
+                <br>
+
+                <label for = "  "> Message </label>
+                <br>
+                <textarea id = "message" name = "message" required ="true"></textarea>
+                <br>
+                
+                <button type = "submit" id = "submit" >"Submit"</button>
+            </form>
+        </section>
+       
+        <section id = "messages"> 
+         <h2>Messages</h2>
+          <ul id = "message_list">
+
+          </ul>
+
+
+        </section>
+       
         <footer>
             
         </footer>
