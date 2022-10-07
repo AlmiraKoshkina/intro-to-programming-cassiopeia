@@ -1,0 +1,114 @@
+
+#myName {
+    font-size: 70px;
+    font-weight: 600;
+}
+#experience {
+    display: inline-block;
+    align-items: baseline;
+    border: 3px solid rgb(238, 121, 37); 
+    color:rgb(65, 50, 204);  
+   }
+#skills {
+    background-color:rgb(172, 240, 133);
+    margin-top: 50px; 
+    padding:20px; 
+    color:rgb(11, 40, 138); 
+   }
+   ul li{
+    list-style:circle;
+    border: 3px solid red; 
+    padding:20px; 
+    margin-top: 50px;  
+}
+  
+h1 {
+    color:rgb(214, 119, 3);
+    font-size: 2 em;
+    font-weight:600;
+}   
+
+#leave_message {
+    font-size: 1.5em;
+}
+textarea {
+    padding: 40px;
+    border-radius: 5ch;
+    border-width: 0.3ch;
+    border
+   
+   }
+#text {
+ border-color: rgb(44, 6, 212);
+ background-color: cornsilk;
+ color:darkorchid;
+ font-size: 0.8em;
+ font-stretch: extra-expanded;
+ margin-top: 10px;
+ margin-bottom: 10px;  
+}
+
+#email {
+    border-color: rgb(44, 6, 212);
+    background-color: cornsilk;
+    color:rgb(65, 50, 204);
+    font-size: 0.8em;
+    font-stretch: extra-expanded; 
+    margin-top: 10px;
+    margin-bottom: 10px;   
+}
+
+#message {
+    border-color: rgb(44, 6, 212);
+    background-color: cornsilk;
+    color:rgb(204, 50, 135);
+    font-size: 0.8em;
+    font-stretch: extra-expanded; 
+    margin-top: 10px;
+    margin-bottom: 10px;   
+}
+   
+label {
+ color:rgb(8, 121, 121);
+
+}
+
+#submit {
+color:aliceblue;
+font-size: 15px;
+font-weight: bolder;
+padding: 30px;
+background-color:rgb(250, 0, 0); 
+border-spacing: 1em;
+border-style: dotted;
+border-radius: 5ch;
+border-color: cadetblue;
+}
+
+footer {
+    background-color: coral;
+    margin-top: 10px;
+    margin-bottom: 10px;   
+}
+
+button {
+background-color: goldenrod;
+
+}
+a:visited {
+    color:darkcyan;
+}
+a:hover {
+    color: red;
+}
+a:focus {
+    color: red;
+    background:rgb(250, 211, 220)
+}
+   body {
+    background-color:honeydew;
+    color:rgb(36, 49, 10);
+    font-stretch:extra-expanded;
+    font-style: italic;
+    font-weight: bolder;
+};
