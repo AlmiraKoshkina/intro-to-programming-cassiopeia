@@ -8,7 +8,8 @@ footer.appendChild(copyright);
 let skills = [
 "JavaScript",
 "HTML",
-"Git"
+"Git",
+"CSS"
 ];
 let skillsSection = document.getElementById('skills');
 skillsList = skillsSection.querySelector('ul'); 

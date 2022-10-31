@@ -12,19 +12,24 @@
             
         </title>
     <link rel = "stylesheet" href = "css/index.css"></link> 
+    <link rel = "stylesheet" href = "css/flexbox.css"></link> 
     </head>
     <body>
-        <section id = "myName">       
-        Almira Koshkina
-        <nav class="menu"> 
+       
+        <nav> 
             
-            <ul> 
+            <ul class="menu"> 
                   <li><a href="#about">About</a></li>                  
                   <li><a href="#experience">Experience</a></li>
                   <li><a href="#skills">Skills</a></li>
                   <li><a href="#connect">Connect</a></li>
 
             </ul>    
+        </nav>
+        
+            <section id = "myName">       
+            Almira Koshkina
+            </section>
 
             <section id = "about" > 
                 <h1>About</h1>
@@ -38,13 +43,23 @@
             <section id = "experience">
                 <h1>Experience</h1>
                 <p>
-                    I am just a beginner in coding.
+                    <ul class = "experience">
+                        <li> Student, Code The Dream, non-profit organization </li>
+                        <li> Freelance photographer and filmmaker </li>
+                        <li>Legal Line LLC, Shchelkovo, Moscow region </li>
+                        <li> Regional branch of the public-state organization DOSAAF in Moscow</li>
+                        <li>Moscow Bar Association "Capital Lawyer", Moscow</li>
+                        <li>"Interbranch Legal Consulting Bureau" LLC (Moscow-Tomsk)</li>
+                        
+                    </ul>
+                    
+
 
                 </p>      
             </section>
             <section id = "skills">
                 <h2>Skills</h2>
-                <ul>
+                <ul class = "skills">
                     
                 </ul>
             </section>
@@ -57,27 +72,29 @@
                 </p>
             </section>
 
-        </nav>
+       
 
         <section> 
             <h2>Leave a Message</h2>
             <form id = "leave_message" action = "index.html" method = "post" name = "leave_message">
-                <label for = "text"> Text </label>
+                <ul class = "leave_message">
+                <li> <label for = "text"> Name </label>
                 <br>
-                <input type = "text" id = "text" name = "name" required ="true">
-                <br>
-
-                <label for = "email"> Email </label>
-                <br>
-                <input type = "email" id = "email" name = "email" required ="true">
+                <input type = "text" id = "text" name = "name" required ="true"></li>
                 <br>
 
-                <label for = "  "> Message </label>
+                <li><label for = "email"> Email </label>
                 <br>
-                <textarea id = "message" name = "message" required ="true"></textarea>
+                <input type = "email" id = "email" name = "email" required ="true"></li>
+                <br>
+
+                <li><label for = "  "> Message </label>
+                <br>
+                <textarea id = "message" name = "message" required ="true"></textarea></li>
                 <br>
                 
-                <button type = "submit" id = "submit" >Submit</button>
+                <li><button type = "submit" id = "submit" >Submit</button></li>
+            </ul>
             </form>
         </section>
        
