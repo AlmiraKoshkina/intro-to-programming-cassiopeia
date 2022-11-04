@@ -59,8 +59,32 @@ messageForm.addEventListener("submit", (event)=> {
     document.getElementById('leave_message').reset();
 });
 
+// Fetch GitHub Repositories
+
+let githubRequest = new XMLHttpRequest();
+// githubRequest.onreadystatechange = function() {
+//     if (githubRequest.readyState === 4) {
+//         console.log(githubRequest.responseText);
+//     }
+// };
+let repositories = new Array();
+parseRepos = function() {
+    repositories = JSON.parse(this.response);
+    console.log("Repos:");
+    console.log(repositories);
+};
+
+githubRequest.addEventListener('load', parseRepos);
+githubRequest.open('GET', 'https://api.github.com/users/AlmiraKoshkina/repos', false);
+githubRequest.send();
 
 
+//Display Repositories in List
 
-
-
+let projectSection = document.getElementById("projects");
+let projectList = projectSection.querySelector('ul');
+for (let i=0; i < repositories.length; i++) {
+    let project = document.createElement('li');
+    project.innerHTML = repositories[i].name;
+    projectList.appendChild(project);
+}
