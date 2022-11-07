@@ -2,7 +2,7 @@ let today = new Date();
 let thisYear = today.getFullYear();
 let footer = document.querySelector('footer');
 let copyright = document.createElement('p');
-copyright.innerHTML = "Almira " + thisYear;
+copyright.innerHTML = "© Almira " + thisYear;
 footer.appendChild(copyright);
 
 let skills = [
@@ -53,38 +53,39 @@ messageForm.addEventListener("submit", (event)=> {
     newMessage.append(removeButton);
     messageList.append(newMessage);
 
-// if (messageList.value === "none") {
-//     messageSection.style.display = "block";
 
     document.getElementById('leave_message').reset();
 });
 
 // Fetch GitHub Repositories
 
-let githubRequest = new XMLHttpRequest();
-// githubRequest.onreadystatechange = function() {
-//     if (githubRequest.readyState === 4) {
-//         console.log(githubRequest.responseText);
-//     }
-// };
 let repositories = new Array();
-parseRepos = function() {
-    repositories = JSON.parse(this.response);
-    console.log("Repos:");
-    console.log(repositories);
-};
-
-githubRequest.addEventListener('load', parseRepos);
-githubRequest.open('GET', 'https://api.github.com/users/AlmiraKoshkina/repos', false);
-githubRequest.send();
 
 
-//Display Repositories in List
+//Using the Fetch API, create a "GET" request to the same GitHub API url
 
-let projectSection = document.getElementById("projects");
-let projectList = projectSection.querySelector('ul');
-for (let i=0; i < repositories.length; i++) {
-    let project = document.createElement('li');
-    project.innerHTML = repositories[i].name;
-    projectList.appendChild(project);
+function fetchData (url) {
+   return fetch(url)
+   .then(res => res.json())
+   .then(function parseRepos(res) {
+        console.log(res);
+        repositories = res;
+        console.log("Repos:");
+        console.log(repositories);
+   })
+   .catch(error => console.log ('Looks like there was a problem', error))
 }
+
+fetchData('https://api.github.com/users/AlmiraKoshkina/repos')
+.then(() => {
+    let projectSection = document.getElementById("projects");
+    let projectList = projectSection.querySelector('ul');
+    console.log("repo len: " + repositories.length);
+    for (let i=0; i < repositories.length; i++) {
+        let project = document.createElement('li');
+        project.innerHTML = repositories[i].name;
+        projectList.appendChild(project);
+}
+})
+
+   
