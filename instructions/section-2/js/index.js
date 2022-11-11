@@ -2,7 +2,7 @@ let today = new Date();
 let thisYear = today.getFullYear();
 let footer = document.querySelector('footer');
 let copyright = document.createElement('p');
-copyright.innerHTML = "© Almira " + thisYear;
+copyright.innerHTML = "&copy Almira Koshkina " + thisYear;
 footer.appendChild(copyright);
 
 let skills = [
@@ -15,6 +15,7 @@ let skillsSection = document.getElementById('skills');
 skillsList = skillsSection.querySelector('ul'); 
 for (let i =0; i< skills.length; i++){
     let skill = document.createElement('li');
+    skill.className = "skill";
     skill.innerHTML = skills[i];
     skillsList.appendChild(skill);
 }
@@ -83,9 +84,10 @@ fetchData('https://api.github.com/users/AlmiraKoshkina/repos')
     console.log("repo len: " + repositories.length);
     for (let i=0; i < repositories.length; i++) {
         let project = document.createElement('li');
-        project.innerHTML = repositories[i].name;
+        project.innerHTML = `<a href="${repositories[i].html_url}">${repositories[i].name}</a>`;
         projectList.appendChild(project);
 }
 })
 
-   
+
+

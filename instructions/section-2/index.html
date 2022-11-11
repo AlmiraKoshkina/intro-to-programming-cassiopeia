@@ -11,8 +11,7 @@
 
             
         </title>
-    <link rel = "stylesheet" href = "css/index.css"></link> 
-    <link rel = "stylesheet" href = "css/flexbox.css"></link> 
+    <link rel = "stylesheet" href = "css/index.css"></link>
     </head>
     <body>
        
@@ -26,16 +25,20 @@
 
             </ul>    
         </nav>
-        
-            <section id = "myName">       
-            Almira Koshkina
+            
+            <section> 
+            <ul id = "myName"> 
+                <li class = 'Me'> <img src = 'img\my_photo.JPG' id = "myPhoto" width="100%" height="100%" alt = 'Almira Koshkina'> </li>          
+                <li class = 'Me'>Almira Koshkina</li>             
+             </ul> 
             </section>
 
             <section id = "about" > 
                 <h1>About</h1>
                 <p>
-                    I used to be a lawer for 9 years in Moscow, Russia. After that I start to shoot documentary and photo.
-                    Now I learn JavaScript.
+                    I used to be a lawyer for nine years in Moscow, Russia. After that, I start to shoot documentaries and photos.
+                    Now I am completing the Intro Programming course at Code The Dream. 
+                    I decided to change my professional life and become a Web Developer ultimately.
                 </p>
             
             </section>
@@ -58,52 +61,46 @@
                 </p>      
             </section>
             <section id = "skills">
-                <h2>Skills</h2>
+                <h1 class = "label_skills">  Skills</h1>
                 <ul class = "skills">
                     
                 </ul>
                 
             </section>
         <section id = "projects">
-            <h2>Projects</h2> 
+            <h1>Projects</h1> 
             <ul>
                     
             </ul>
 
 
         </section>
-            <section id = "connect">
-                <h1>Connect</h1>
-                <p>
-                    email: <a href = "mailto:almira.koshkina@gmail.com"> almira.koshkina@gmail.com</a>
-                    GitHub: https://github.com/AlmiraKoshkina
-                    social media: https://www.facebook.com/almira.koshkina/ , https://www.instagram.com/almira_koshkina_photo/
-                </p>
-            </section>
+            
             
        
 
         <section> 
-            <h2>Leave a Message</h2>
+            <h1 class = "leave_message">Leave a Message</h1>
+            
             <form id = "leave_message" action = "index.html" method = "post" name = "leave_message">
-                <ul class = "leave_message">
-                <li> <label for = "text"> Name </label>
+               
+                <label for = "text"> Name </label>
                 <br>
-                <input type = "text" id = "text" name = "name" required ="true"></li>
-                <br>
-
-                <li><label for = "email"> Email </label>
-                <br>
-                <input type = "email" id = "email" name = "email" required ="true"></li>
+                <input type = "text" id = "text" name = "name" required ="true">
                 <br>
 
-                <li><label for = "  "> Message </label>
+                <label for = "email"> Email </label>
                 <br>
-                <textarea id = "message" name = "message" required ="true"></textarea></li>
+                <input type = "email" id = "email" name = "email" required ="true">
+                <br>
+
+                <label for = "  "> Message </label>
+                <br>
+                <textarea id = "message" name = "message" required ="true"></textarea>
                 <br>
                 
-                <li><button type = "submit" id = "submit" >Submit</button></li>
-            </ul>
+                <button type = "submit" id = "submit" >Submit</button>
+            
             </form>
         </section>
        
@@ -117,9 +114,22 @@
         </section>
        
         <footer>
-            
+            <!-- <section> -->
+                <ul id = "connect">
+                    
+                    <li> <a href = "mailto:almira.koshkina@gmail.com"> <img src = 'img\gmail.png' width = 35px height= 35px id = "icons"></a></li>
+                  
+                    <li><a href ="https://github.com/AlmiraKoshkina"><img src = 'img\github.png' width = 35px height= 35px id = "icons"></a></li>
+                                                         
+                    <li><a href = "https://www.facebook.com/almira.koshkina/"><img src = 'img\facebook.png' width = 35px height= 35px id = "icons"></a></li>                 
+                    
+                    <li><a href = "https://www.instagram.com/almira_koshkina_photo/"><img src = 'img\instagram.png' width = 35px height= 35px id = "icons"></a></li>
+                <!-- </ul> -->
+            <!-- </section>   -->
         </footer>
         <script src = "js/index.js">
+
+            
 
         </script>
 
