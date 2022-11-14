@@ -170,6 +170,11 @@ a:focus {
     padding-top: 20px; 
     
 } */
+.messages {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: auto;
+}   
 
 li {
     display:grid;
@@ -178,7 +183,12 @@ li {
     /* background:rgb(241, 233, 232); */
     
 }
-
+button {
+    background-color: cadetblue;
+    color: white;
+    font-size: 20px;
+    width: 100px;
+    }
 
 footer {
     width: 97%;
